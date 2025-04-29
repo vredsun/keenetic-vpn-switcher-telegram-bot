@@ -16,6 +16,23 @@ Server for telegram bot for fast switch vpn policy
 
 - `ENV_POLICY_NAME=Policy<\d+>` - name of vpn policy (default `Policy0`)
 
+# Docker
+
+<https://hub.docker.com/r/vokinda/vpn-bot/tags>
+
+```bash
+docker pull vokinda/vpn-bot
+
+docker run -p 80:80 \
+-e ENV_WHITE_USER_IDS=xxxxx,yyyyy \
+-e ENV_DEVICE_NAMES=xxxxx,yyyyy \
+-e ENV_TELEGRAM_BOT_TOKEN=xxxx:yyyyyyyy \
+-e ENV_HOST=xxxxx.yyy.zzz \
+-e ENV_USERNAME=xxxxx \
+-e ENV_PASSWORD=xxxxx
+vokinda/vpn-bot:latest 
+```
+
 # Helpfull links
 
 - keenetic api description - [link](https://help.keenetic.com/hc/ru/categories/201757869)
