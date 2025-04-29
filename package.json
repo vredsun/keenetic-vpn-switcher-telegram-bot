@@ -1,0 +1,21 @@
+{
+  "name": "vpn_bot",
+  "version": "1.0.0",
+  "description": "Server for telegram bot for fast switch vpn policy",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "vredsun",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "node-telegram-bot-api": "^0.66.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.64.7"
+  }
+}
