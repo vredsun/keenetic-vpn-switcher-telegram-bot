@@ -18,7 +18,6 @@ const run = async () => {
   botService.onText(/\/start/, (message) => {
     const chatId = message.chat.id
 
-    stateService.saveChat(chatId, message.message_id);
     stateService.onStart(chatId)
   });
 

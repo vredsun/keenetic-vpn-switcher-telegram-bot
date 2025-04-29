@@ -43,11 +43,13 @@ class StateService {
       return;
     }
 
-    await this.#botService.sendMessage(chatId, ButtonTitle.ready, {
+    const message = await this.#botService.sendMessage(chatId, ButtonTitle.ready, {
       reply_markup: {
         inline_keyboard: getMessageKeyboard(this.#state),
       },
     })
+
+    this.saveChat(chatId, message.message_id);
   }
 
   editState = (mac: string, status: DeviceStatus) => {
